@@ -246,7 +246,7 @@
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom:  1.5rem;
+  margin-bottom: 1.5rem;
   flex-wrap: wrap;
 }
 
@@ -386,5 +386,124 @@
   100% {
     opacity: 0;
     transform: translateY(-10px);
+  }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0; /* Remove sidebar margin on mobile */
+  }
+
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .logo-container {
+    margin-bottom: 0.5rem;
+  }
+
+  .logo {
+    height: 30px; /* Smaller logo on mobile */
+  }
+
+  .header-right {
+    gap: 0.5rem;
+  }
+
+  .welcome-message {
+    font-size: 0.8rem;
+  }
+
+  .logout-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .logout-icon {
+    font-size: 0.8rem;
+  }
+
+  .sidebar {
+    display: none; /* Hide sidebar on mobile; typically you'd toggle this with a hamburger menu */
+  }
+
+  .dashboard {
+    padding: 0.5rem;
+  }
+
+  .dashboard-title-container {
+    margin-bottom: 2rem; /* Extra space for breadcrumb */
+  }
+
+  .dashboard-title-text {
+    font-size: 1.2rem;
+  }
+
+  .breadcrumb {
+    position: static; /* Remove absolute positioning */
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .breadcrumb-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .breadcrumb-arrow,
+  .breadcrumb-separator {
+    display: none; /* Hide separators for cleaner look */
+  }
+
+  .dashboard-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .dashboard-card {
+    width: 100%;
+    max-width: 300px; /* Prevent cards from being too wide */
+    padding: 0.8rem;
+  }
+
+  .dashboard-card h3 {
+    font-size: 0.7rem;
+  }
+
+  .card-value {
+    font-size: 1rem;
+  }
+
+  .dashboard-charts {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .chart-container {
+    min-width: 100%;
+    padding: 0.8rem;
+  }
+
+  .chart-container h3 {
+    font-size: 0.9rem;
+  }
+
+  .chart {
+    height: 200px; /* Reduce chart height on mobile */
+  }
+
+  .notification {
+    width: 90%;
+    max-width: 250px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    right: 5%;
   }
 }
