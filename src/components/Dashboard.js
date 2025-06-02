@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import * as d3 from "d3";
 import '../App.css';
+import IconHome from '../assets/Icon_home.svg'; // Import the SVG icon
 
 function Dashboard() {
   const chart1Ref = useRef(null);
@@ -73,8 +74,10 @@ function Dashboard() {
       </div>
       <div className="breadcrumb">
         <div className="breadcrumb-left">
-          <img src="https://via.placeholder.com/16x16.png?text=Home" alt="Home Icon" className="breadcrumb-icon" />
+          <img src={IconHome} alt="Home Icon" className="breadcrumb-icon" />
+          <span className="breadcrumb-separator"></span>
           <span className="breadcrumb-arrow">←</span>
+          <span className="breadcrumb-separator"></span>
           <span className="breadcrumb-item">Masters</span>
           <span className="breadcrumb-separator"></span>
           <span className="breadcrumb-item">Transaction</span>
