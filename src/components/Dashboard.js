@@ -1,13 +1,13 @@
 import { useEffect, useRef } from "react";
 import * as d3 from "d3";
 import '../App.css';
-import IconHome from '../assets/Icon_home.svg'; // Import the SVG icon
+import IconHome from '../assets/Icon_home.svg';
 
 function Dashboard() {
   const chart1Ref = useRef(null);
   const chart2Ref = useRef(null);
 
-  const createBlankGraph = (chartRef, chartId, title) => {
+  const createBlankGraph = (chartRef) => {
     const margin = { top: 20, right: 20, bottom: 30, left: 40 };
     const width = 500 - margin.left - margin.right;
     const height = 300 - margin.top - margin.bottom;
@@ -63,26 +63,26 @@ function Dashboard() {
   };
 
   useEffect(() => {
-    createBlankGraph(chart1Ref, "chart1", "Monthly Projects [By Count]");
-    createBlankGraph(chart2Ref, "chart2", "Monthly Projects [By Amount]");
+    createBlankGraph(chart1Ref);
+    createBlankGraph(chart2Ref);
   }, []);
 
   return (
     <div className="dashboard">
-      <div className="dashboard-title">
-        <span className="dashboard-title-text">Project Mgmt. Overview</span>
-      </div>
       <div className="breadcrumb">
         <div className="breadcrumb-left">
           <img src={IconHome} alt="Home Icon" className="breadcrumb-icon" />
-          <span className="breadcrumb-separator"></span>
           <span className="breadcrumb-arrow">←</span>
-          <span className="breadcrumb-separator"></span>
           <span className="breadcrumb-item">Masters</span>
           <span className="breadcrumb-separator"></span>
           <span className="breadcrumb-item">Transaction</span>
           <span className="breadcrumb-separator"></span>
           <span className="breadcrumb-item">Reports</span>
+        </div>
+      </div>
+      <div className="dashboard-title-container">
+        <div className="dashboard-title">
+          <span className="dashboard-title-text">Project Mgmt. Overview</span>
         </div>
       </div>
       <div className="dashboard-cards">

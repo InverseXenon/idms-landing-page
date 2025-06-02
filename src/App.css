@@ -53,7 +53,7 @@
 }
 
 .welcome-message {
-  color: #0078d4;
+  color: #007DAF;
   font-size: 0.9rem;
 }
 
@@ -104,13 +104,8 @@
   background-color: #e9ecef;
 }
 
-/* Remove or comment out the active state background color change */
-.sidebar-item.active {
-  /* background-color: #007bff; */
-}
-
 .color-0 {
-  color: #007bff;
+  color: #007DAF;
 }
 
 .color-1 {
@@ -118,7 +113,7 @@
 }
 
 .color-2 {
-  color: #007bff;
+  color: #007DAF;
 }
 
 .color-3 {
@@ -184,6 +179,13 @@
   padding: 1rem;
   background-color: #f5f5f5;
   overflow-y: auto;
+  position: relative;
+}
+
+.dashboard-title-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
 .dashboard-title {
@@ -192,19 +194,19 @@
 }
 
 .dashboard-title-text {
-  color: #0078d4;
+  color: #007DAF;
   font-size: 1.5rem;
   font-weight: 500;
 }
 
 .breadcrumb {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
   display: flex;
   align-items: center;
-  margin-bottom: 1.5rem;
   font-size: 0.9rem;
   color: #666;
-  border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 0.5rem;
 }
 
 .breadcrumb-left {
@@ -230,7 +232,7 @@
 }
 
 .breadcrumb-item:hover {
-  color: #0078d4;
+  color: #007DAF;
 }
 
 .breadcrumb-separator {
@@ -244,7 +246,7 @@
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom:  1.5rem;
   flex-wrap: wrap;
 }
 
@@ -254,7 +256,7 @@
   padding: 1rem;
   width: 200px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  border-bottom: 6px solid #0078d4;
+  border-bottom: 6px solid #007DAF;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -263,7 +265,7 @@
 
 .dashboard-card h3 {
   font-size: 0.8rem;
-  color: #0078d4;
+  color: #007DAF;
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
@@ -271,7 +273,7 @@
 .card-value {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #0078d4;
+  color: #007DAF;
 }
 
 .dashboard-charts {
@@ -287,12 +289,12 @@
   flex: 1;
   min-width: 45%;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  border-bottom: 6px solid #0078d4;
+  border-bottom: 6px solid #007DAF;
 }
 
 .chart-container h3 {
   font-size: 1rem;
-  color: #0078d4;
+  color: #007DAF;
   margin-bottom: 1rem;
   text-align: center;
 }
