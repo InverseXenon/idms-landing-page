@@ -1,29 +1,21 @@
-import React from 'react';
-import { Navbar, Container, Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/App.css';
+import '../App.css';
+import IDMSLogo from '../assets/IDMS_logo.svg'; // Import the logo with text
 
-const Header = () => {
+function Header({ username }) {
   return (
-    <Navbar bg="light" expand="lg" fixed="top" className="header">
-      <Container fluid>
-        <Navbar.Brand href="/">
-          <img
-            src="https://via.placeholder.com/40x40.png?text=IDMS" // Replace with actual logo URL if available
-            alt="IDMS Infotech"
-            className="d-inline-block align-top"
-          />
-          {' IDMS Infotech'}
-        </Navbar.Brand>
-        <div className="mx-auto">
-          Welcome - Functional Support
-        </div>
-        <Button variant="danger" className="ms-auto logout-btn">
-          Logout
-        </Button>
-      </Container>
-    </Navbar>
+    <div className="header">
+      <div className="logo-container">
+        <img src={IDMSLogo} alt="IDMS Logo" className="logo" />
+      </div>
+      <div className="header-right">
+        <span className="welcome-message">Welcome, {username}</span>
+        <button className="logout-button">
+          <span>Logout</span>
+          <i className="bi bi-box-arrow-right logout-icon"></i>
+        </button>
+      </div>
+    </div>
   );
-};
+}
 
 export default Header;
