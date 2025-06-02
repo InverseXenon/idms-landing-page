@@ -1,22 +1,37 @@
+import React from 'react';
 import '../App.css';
-import Logo from '../assets/logo.svg'; // Import the logo only
+import Logo from '../assets/logo.svg';
+import BusinessLeadsIcon from '../assets/businessLeads.svg';
+import SalesIcon from '../assets/sales.svg';
+import PlanningIcon from '../assets/planning.svg';
+import PurchaseIcon from '../assets/purchase.svg';
+import StoreIcon from '../assets/store.svg';
+import MaintenanceIcon from '../assets/maintenance.svg';
+import ProductionIcon from '../assets/production.svg';
+import QualityIcon from '../assets/quality.svg';
+import DispatchIcon from '../assets/dispatch.svg';
+import HrIcon from '../assets/hr.svg';
+import AccountsIcon from '../assets/accounts.svg';
+import FinanceIcon from '../assets/finance.svg';
+import SettingsIcon from '../assets/settings.svg';
+import SupportIcon from '../assets/support.svg';
 
 function Sidebar({ activePage, onMenuClick }) {
   const menuItems = [
-    { id: "Business Leads", icon: "bi-briefcase" },
-    { id: "Sales", icon: "bi-graph-up" },
-    { id: "Planning", icon: "bi-person-workspace" },
-    { id: "Purchase", icon: "bi-cart" },
-    { id: "Stores", icon: "bi-shop" },
-    { id: "Maintenance", icon: "bi-tools" },
-    { id: "Project Mgmt.", icon: "bi-kanban" },
-    { id: "Quality", icon: "bi-gem" },
-    { id: "Dispatch", icon: "bi-truck" },
-    { id: "HR & Admin", icon: "bi-person" },
-    { id: "Accounts", icon: "bi-currency-rupee" },
-    { id: "Finance", icon: "bi-coin" },
-    { id: "Settings", icon: "bi-gear" },
-    { id: "Support", icon: "bi-headset" },
+    { id: "Business Leads", icon: BusinessLeadsIcon },
+    { id: "Sales", icon: SalesIcon },
+    { id: "Planning", icon: PlanningIcon },
+    { id: "Purchase", icon: PurchaseIcon },
+    { id: "Stores", icon: StoreIcon },
+    { id: "Maintenance", icon: MaintenanceIcon },
+    { id: "Project Mgmt.", icon: ProductionIcon },
+    { id: "Quality", icon: QualityIcon },
+    { id: "Dispatch", icon: DispatchIcon },
+    { id: "HR & Admin", icon: HrIcon },
+    { id: "Accounts", icon: AccountsIcon },
+    { id: "Finance", icon: FinanceIcon },
+    { id: "Settings", icon: SettingsIcon },
+    { id: "Support", icon: SupportIcon },
   ];
 
   return (
@@ -28,7 +43,13 @@ function Sidebar({ activePage, onMenuClick }) {
           onClick={() => onMenuClick(item.id)}
         >
           <div className="icon-container">
-            <i className={`${item.icon} menu-icon`}></i>
+            <img
+              src={item.icon}
+              alt={`${item.id} Icon`}
+              className="menu-icon"
+              style={{ width: '20px', height: '20px', display: 'block' }}
+              onError={() => console.log(`Failed to load icon for ${item.id}`)}
+            />
           </div>
           <span className="menu-text">{item.id}</span>
         </div>

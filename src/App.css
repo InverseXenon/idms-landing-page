@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Source Serif 4", "Georgia", "Times New Roman", serif; /* Updated to Source Serif 4 */
+  font-family: "Source Serif 4", "Georgia", "Times New Roman", serif;
 }
 
 .app {
@@ -104,8 +104,9 @@
   background-color: #e9ecef;
 }
 
+/* Remove or comment out the active state background color change */
 .sidebar-item.active {
-  background-color: #007bff;
+  /* background-color: #007bff; */
 }
 
 .color-0 {
@@ -145,34 +146,12 @@
   background-color: currentColor;
 }
 
-.color-0 .icon-container::after {
-  background-color: #007bff;
-}
-
-.color-1 .icon-container::after {
-  background-color: #40c4ff;
-}
-
-.color-2 .icon-container::after {
-  background-color: #007bff;
-}
-
-.color-3 .icon-container::after {
-  background-color: #ff4d8f;
-}
-
-.color-4 .icon-container::after {
-  background-color: #28a745;
-}
-
 .menu-icon {
-  font-size: 1.1rem;
+  width: 20px;
+  height: 20px;
   margin-right: 5px;
-}
-
-.sidebar-item.active .menu-icon,
-.sidebar-item.active .menu-text {
-  color: white;
+  display: block;
+  fill: currentColor;
 }
 
 .menu-text {
@@ -187,10 +166,6 @@
   border-bottom: 1px solid #dee2e6;
   flex: 1;
   min-height: calc((100vh - 60px) / 15);
-}
-
-.powered-by .icon-container::after {
-  background-color: #ffffff;
 }
 
 .powered-by-logo {
